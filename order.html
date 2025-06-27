@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="alert  alert-success" role="alert">
+      <h4 class="alert-heading" style="text-align: left;">this website is alternative to mac donalid</h4>
+     
+    </div>
+   <div class="container">
+    
+    <div class=" jumbotron-fluid jumbotron bg-warning">
+      <img  src="C:\Users\Egypt\Desktop\bootstrap-5.3.2-dist\logo.png" width="200" height="200" shadow-lg>
+      <h1 class="text-center" style="text-decoration-color: rgb(49, 30, 171);">
+          "Feel free to stand with plastine"
+      </h1>
+    </div>
+    <ul class="nav" style="padding: 10px; margin: 10px;">
+      <li><a class="nav-a" href="index.html" style="text-decoration: none;">Home</a></li>
+      <li><a class="nav-a" href="menu.html" style="text-decoration: none;">menu</a></li>
+      <li><a class="nav-a" href="order.html" style="text-decoration: none;">Order food now</a></li>
+      <li><a class="nav-a" href="offers.html" style="text-decoration: none;">Offers</a></li>
+      </ul>
+      <h>FIT Food - Order Form</h1>
+        <table style="background-color:aquamarine;margin-left: 100px;">  <tr>
+        <td>Branch : </td>
+        <td> 
+        <select> 
+        <option>--Select Item--</option>
+        <option>القدس</option>
+        <option>حيفا</option> 
+        </select>
+        </td> 
+        </tr>
+        <tr>
+        <td>User name:</td>
+        <td>
+        <input type="text" >
+        </td>
+        </tr>
+        <tr><td>Mobile: </td>
+        <td><input type="text" id="mblenmb" onfocusout="checkmob()"></td></tr> 
+        </table>
+        <br>
+        <form name="tblform" >
+          <table width="80%"  id="alignment" >
+          <tr>
+          <th>Food Item</th>
+          <th> </th>
+          <th>Quantity</th>
+          <th>Price</th> 
+          </tr>
+          <tr> 
+          <td>Item 1:</td> 
+          <td>
+          <select id="item1">
+          <option value="1">--Select Item--</option> 
+          <option value="Chicken pizza">Chicken pizza</option> 
+          <option value="Vegetable Pizza">Vegetable Pizza</option> 
+          <option value="Chicken Kottu">Chicken Kottu</option> 
+          <option value="Vegetable Kottu">Vegetable Kottu</option> 
+          <option value="Water Bottle ">Water Bottle </option> 
+          </select>
+          </td> 
+          <td><input type="number" value="0" id="q1"></td>
+          <td><input type="text" id="p1"></td>
+          </tr>   
+          <tr>
+          <td>Item 2:</td>
+          <td>
+          <select id="item2"> 
+          <option value="1">--Select Item--</option> 
+          <option value="Chicken pizza">Chicken pizza</option> 
+          <option value="Vegetable Pizza">Vegetable Pizza</option> 
+          <option value="Chicken Kottu">Chicken Kottu</option>  
+          <option value="Vegetable Kottu">Vegetable Kottu</option>
+          <option value="Water Bottle ">Water Bottle </option>  
+          </select>
+          </td>
+          <td><input  type="number" value="0" id="q2"></td>  
+          <td><input type="text"  id="p2"></td>  
+          </tr> 
+          <tr>
+          <td>Item 3:</td>
+          <td><select id="item3">  
+          <option value="1">--Select Item--</option> 
+          <option value="Chicken pizza">Chicken pizza</option>  
+          <option value="Vegetable Pizza">Vegetable Pizza</option> 
+          <option value="Chicken Kottu">Chicken Kottu</option>
+          <option value="Vegetable Kottu">Vegetable Kottu</option> 
+          <option value="Water Bottle ">Water Bottle </option> 
+          </select>
+          </td>
+          <td><input type="number" value="0" id="q3"></td>
+          <td><input type="text"  id="p3"></td> 
+          </tr> 
+          <tr>
+          <td>Item 4:</td>
+          <td><select id="item4">   
+          <option value="1">--Select Item--</option> 
+          <option value="Chicken pizza">Chicken pizza</option>   
+          <option value="Vegetable Pizza">Vegetable Pizza</option> 
+          <option value="Chicken Kottu">Chicken Kottu</option> 
+          <option value="Vegetable Kottu">Vegetable Kottu</option> 
+          <option value="Water Bottle ">Water Bottle </option>   
+          </select>
+          </td>
+          <td><input type="number" value="0" id="q4"></td>
+          <td><input type="text"  id="p4"></td> 
+          </tr>    
+          <tr>
+          <td></td> 
+          <td></td> 
+          <td><input type="submit" class="button" value="Create Bill" onclick=createBill()></td>
+          <td><input type="reset" class="button" value="Clear"></td>
+          </tr>
+          </table>
+          </form>
+        <script style="margin: 10px; padding: 10px;">function checkmob(){
+          var str=document.getElementById("mblenmb").value;
+      var ptr=/^07[072568][0-9]{7}$/;
+      
+      var chck=ptr.test(str);
+      
+      if(!chck)
+      alert("Moblie Number is Incorrect");
+      function createBill(){
+var index=0;
+var items = ["null", "null", "null","null"];
+var quantities = ["null", "null", "null","null"];
+var prices = ["null", "null", "null","null"];
+						
+						
+						
+var e1 = document.getElementById("item1");
+var itemselected1 = e1.options[e1.selectedIndex].value;
+if(itemselected1!="1"){
+items[index]=itemselected1;
+quantities[index] = document.getElementById("q1").value;
+prices[index] = document.getElementById("p1").value;
+index++;
+}
+			
+
+var e2 = document.getElementById("item2");
+var itemselected2 = e2.options[e2.selectedIndex].value;
+if(itemselected2!="1"){
+items[index]=itemselected2;
+quantities[index] = document.getElementById("q2").value;
+prices[index] = document.getElementById("p2").value;
+index++;
+}
+
+var e3 = document.getElementById("item3");
+var itemselected3 = e3.options[e3.selectedIndex].value;
+if(itemselected3!="1"){
+items[index]=itemselected3;
+quantities[index] = document.getElementById("q3").value;
+prices[index] = document.getElementById("p3").value;
+index++;
+}
+
+var e4 = document.getElementById("item4");
+itemselected4 = e4.options[e4.selectedIndex].value;
+if(itemselected4!="1"){
+items[index]=itemselected4;
+quantities[index] = document.getElementById("q4").value;
+prices[index] = document.getElementById("p4").value;
+index++;
+}
+
+var fTot=0;
+strt(1);
+for(var i=0;i<index;i++){
+document.write("<tr>");
+createtbl(items[i]);
+createtbl(quantities[i]);
+createtbl(prices[i]);
+var tot=parseInt(quantities[i])*parseInt(prices[i]);
+document.write("<td>"+tot+"</td>");
+fTot+=tot;
+document.write("</tr>");
+}
+document.write("<tr><td colspan=\"3\"><strong>TOTAL</strong></td><td>"+fTot+"</td><tr>");
+strt(2);	
+}
+function createtbl(x){		
+document.write("<td>"+x+"</td>");
+}
+
+function strt(n){
+if(n==1){
+document.writeln("<h1 style=\"text-align:center;\">The Bill</h1>");
+document.writeln("<table width=\"90%\" border=\"1\">");
+document.writeln("<tr><th>ITEMS</th><th>QUANTITY</th><th>PRICE</th><th></th></tr>");
+}
+	else
+	document.write("</table>");
+}
+
+function createTot(x,y){
+var tot=parseInt(x)*parseInt(y);
+document.write("<td>"+tot+"</td>");
+}
+    }</script> 
+   
+   <div class="container" style="margin: 20px; padding: 20px;">
+    Copyright © 2017 save palastine Egypt <a href=""  style="text-decoration: none;"> Privacy Policy</a>  <spn> | </spn><a href=""  style="text-decoration: none;"> Terms & Conditions</a>  <spn> | </spn><a href=""  style="text-decoration: none;">  Contact</a>  <spn> | </spn> <a href="" style="text-decoration: none;" > Sitemap </a>  <spn> | </spn> <a href=""  style="text-decoration: none;"> food palastine Story</a>
+
+
+
+   </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  </body>
+</html>
